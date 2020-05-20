@@ -1,0 +1,172 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body,button,header{
+    font-family: 'Poppins', sans-serif;
+}
+body{
+
+background: linear-gradient(to right,#494964,#6f6f89);
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+nav{
+    text-align: right;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+header{
+    margin: 10px 0 20px 10px;
+    
+}
+
+header h1{
+    text-align: center;
+}
+
+.container{
+ 
+    width: 100%;
+    background-color: whitesmoke;
+    /*background: linear-gradient(to right,#494964,#6f6f89);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;*/
+    margin: auto;
+    padding: 10px;
+}
+
+input
+{
+    padding: 4px 6px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+.content
+{
+    display: flex;
+    margin-top: 30px;
+    max-width: 1400px;
+}
+
+.players
+{
+max-width: 400px;
+margin-right: 50px;
+margin-left: 10px;
+padding: 15px;
+box-sizing: border-box;
+border: 1px solid #ffd868;
+color: rgb(112, 112, 109);
+}
+
+.boardBox
+{
+
+max-width: 1000px;
+width: 100%;
+
+}
+.genBox
+{
+background-color: whitesmoke;
+
+display: block;
+text-align: center;
+max-width: 300px;
+align-content: center;
+margin: 0 auto;
+}
+
+.num
+{
+    width: 9%;
+    margin: 2px;
+    padding: 2px;
+    line-height: 80px;
+    text-align: center;
+    border: 1px solid #ffd868;
+    display: inline-block;
+    color: #CCC;
+    font-size: 24px;
+    border-radius: 100%;
+    box-sizing: border-box;
+}
+
+#numberGen {
+    font-size: 50px;
+    text-align: center;
+    color: green;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block; 
+    background-color: #EEE;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #EEE;
+}
+
+button{
+
+    margin-top: 5px;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.winners
+{
+    margin-top: 10px;
+    padding: 10x;
+    color: rgb(112, 112, 109);
+}
+
+.winners h3
+{
+    margin: 10px;
+}
+
+.winners h5
+{
+    margin: 5px 5px 5px 10px;
+}
+
+table
+{
+    width: 100%;
+    margin: 20px;   
+}
+
+.ticketTable
+{
+    width: 100%;
+    margin: 20px; 
+    border: 1px solid black;
+    text-align: center;  
+}
+
+
+table,tr,td
+{
+    border: 1px solid black;
+    text-align: center;
+}
+
+td
+{
+    padding: 5px;
+}
+
