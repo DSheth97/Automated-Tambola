@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+{% endblock %}
+
+{% block body %}
+<form action="/allotPrizes" method="post">
+    <input type="submit" id="AddFullHouse" value="+" name="AddFullHouse">
+    <label for="">Full Houses</label>
+    <input type="text" id ="FullHouseAmtTotal" name="FullHouse" style="height: 30px;width: 50px; ">
+</form>
+
+{%for x in form%}
+<li>{{x}}</li>
+{%endfor%}
+<form action="/allotPrizes" method="post">
+<p>{{form.hidden_tag()}}</p>
+{% for address_entry_form in form.amounts %}
+    <dl>{{address_entry_form}}
+    <h2>{{form.amounts}}</h2>
+    <p>{{ address_entry_form.hidden_tag() }}</p>
+    {# Flask-WTF needs `hidden_tag()` so CSRF works for each form #}
+    <h4>{{ address_entry_form.id }}</h4>
+</dl>
+{% endfor %}
+</form>
+
+{% endblock %} 

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+{% endblock %}
+{% block body %} 
+
+{% for tkt in tkts %}
+<div class="ticketTable" style="border: 1px solid black;max-width: 400px;width: 100%;margin: 20px;box-sizing: border-box;">
+<div style="text-align:center;border: 1px solid black "><h5>{{tkt.player.name}}-{{tkt.ticket_id}}</h5></div>
+    <table style=" text-align: center;width: 100%;border-collapse: collapse;">
+    {% set lst = tkt.ticket.split(" ") %}
+    <tr style="border: 1px solid black"></tr>
+    {% for num in range(27) %}
+    
+    
+        {% if num==9 or num==18%}
+            </tr><tr style="border: 1px solid black">
+        {% endif %}
+            {% if lst[num]!="0" %}
+                <td style="border: 1px solid black;width: 50px;">{{lst[num]}}</td>
+            {% else %}
+                <td style="border: 1px solid black;width: 50px;">    </td>
+            {% endif %}
+        
+        
+    {% endfor %}   
+</tr>
+</table>
+</div>
+{% endfor %}
+
+<!--
+<div class="buttons">
+<form action="" method="post">
+<input type="submit" id="back" name="submitbtn" value="Back">
+<input type="submit" id="share" name="submitbtn" value="Share">
+</form>
+</div>
+-->
+
+
+{% endblock %}

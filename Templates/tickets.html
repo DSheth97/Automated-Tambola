@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+{% endblock %}
+{% block body %} 
+
+<div>
+    <form action="/gen" method="POST">
+        
+    <label for="name">Name : </label>
+    <input type="text" name= "name" id="name" placeholder="">
+    
+    <label for="contact">Mobile Number : </label>
+    <input type="text" name= "contact" id="contact" placeholder="">
+
+    <label for="tickets">How many tickets are required ?</label>
+    <input type="text" name= "tickets" id="tickets" placeholder="">
+
+    <div class="buttons">
+        <button type="submit" id="submit">Generate Tickets</button>
+    </div>
+    </form>
+</div>
+
+
+
+{% endblock %}

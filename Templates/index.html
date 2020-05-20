@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+{% endblock %}
+
+{% block body %}
+   <div class="container">
+        <nav>
+            <a href="{{ url_for('allotPrizes') }}">Allot Prizes</a>
+            <a href="{{ url_for('genTickets') }}">Generate Tickets</a>
+        </nav>
+        <header>
+        <h1>DS Tambola Housie</h1>
+        </header>
+
+        <div class="genBox">
+            <div id="numberGen">{{board[len-1]}}</div> 
+            <div class="buttons">
+                <form action="" method="POST">
+                <input type="submit" id="submit" name="submit" value="GenerateNumber">
+                </form>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="players">
+                <h3>Player's Ticket Numbers</h3>
+                
+                <ol style="margin: 5px;">
+                    {% for player in players %}
+                    {% set mytkt = ', '.join(players[player]) %}
+                    <li style="margin: 10px;">
+                        {{player}} - {{mytkt}}
+                       
+                        
+                    </li>
+                    {% endfor %}
+                </ol>
+               
+                
+            </div>
+
+            <div class="boardBox">
+                <div class="num" id="num-1">1</div>
+                <div class="num" id="num-2">2</div>
+                <div class="num" id="num-3">3</div>
+                <div class="num" id="num-4">4</div>
+                <div class="num" id="num-5">5</div>
+                <div class="num" id="num-6">6</div>
+                <div class="num" id="num-7">7</div>
+                <div class="num" id="num-8">8</div>
+                <div class="num" id="num-9">9</div>
+                <div class="num" id="num-10">10</div>
+
+                <div class="num" id="num-11">11</div>
+                <div class="num" id="num-12">12</div>
+                <div class="num" id="num-13">13</div>
+                <div class="num" id="num-14">14</div>
+                <div class="num" id="num-15">15</div>
+                <div class="num" id="num-16">16</div>
+                <div class="num" id="num-17">17</div>
+                <div class="num" id="num-18">18</div>
+                <div class="num" id="num-19">19</div>
+                <div class="num" id="num-20">20</div>
+
+                <div class="num" id="num-21">21</div>
+                <div class="num" id="num-22">22</div>
+                <div class="num" id="num-23">23</div>
+                <div class="num" id="num-24">24</div>
+                <div class="num" id="num-25">25</div>
+                <div class="num" id="num-26">26</div>
+                <div class="num" id="num-27">27</div>
+                <div class="num" id="num-28">28</div>
+                <div class="num" id="num-29">29</div>
+                <div class="num" id="num-30">30</div>
+
+                <div class="num" id="num-31">31</div>
+                <div class="num" id="num-32">32</div>
+                <div class="num" id="num-33">33</div>
+                <div class="num" id="num-34">34</div>
+                <div class="num" id="num-35">35</div>
+                <div class="num" id="num-36">36</div>
+                <div class="num" id="num-37">37</div>
+                <div class="num" id="num-38">38</div>
+                <div class="num" id="num-39">39</div>
+                <div class="num" id="num-40">40</div>
+
+                <div class="num" id="num-41">41</div>
+                <div class="num" id="num-42">42</div>
+                <div class="num" id="num-43">43</div>
+                <div class="num" id="num-44">44</div>
+                <div class="num" id="num-45">45</div>
+                <div class="num" id="num-46">46</div>
+                <div class="num" id="num-47">47</div>
+                <div class="num" id="num-48">48</div>
+                <div class="num" id="num-49">49</div>
+                <div class="num" id="num-50">50</div>
+
+                <div class="num" id="num-51">51</div>
+                <div class="num" id="num-52">52</div>
+                <div class="num" id="num-53">53</div>
+                <div class="num" id="num-54">54</div>
+                <div class="num" id="num-55">55</div>
+                <div class="num" id="num-56">56</div>
+                <div class="num" id="num-57">57</div>
+                <div class="num" id="num-58">58</div>
+                <div class="num" id="num-59">59</div>
+                <div class="num" id="num-60">60</div>
+
+                <div class="num" id="num-61">61</div>
+                <div class="num" id="num-62">62</div>
+                <div class="num" id="num-63">63</div>
+                <div class="num" id="num-64">64</div>
+                <div class="num" id="num-65">65</div>
+                <div class="num" id="num-66">66</div>
+                <div class="num" id="num-67">67</div>
+                <div class="num" id="num-68">68</div>
+                <div class="num" id="num-69">69</div>
+                <div class="num" id="num-70">70</div>
+
+                <div class="num" id="num-71">71</div>
+                <div class="num" id="num-72">72</div>
+                <div class="num" id="num-73">73</div>
+                <div class="num" id="num-74">74</div>
+                <div class="num" id="num-75">75</div>
+                <div class="num" id="num-76">76</div>
+                <div class="num" id="num-77">77</div>
+                <div class="num" id="num-78">78</div>
+                <div class="num" id="num-79">79</div>
+                <div class="num" id="num-80">80</div>
+
+                <div class="num" id="num-81">81</div>
+                <div class="num" id="num-82">82</div>
+                <div class="num" id="num-83">83</div>
+                <div class="num" id="num-84">84</div>
+                <div class="num" id="num-85">85</div>
+                {% if 86 in board %}
+                <div class="num" id="num-86" style="background-color: brown; color: white;">86</div>
+                {% else %}
+                <div class="num" id="num-86">86</div>
+                {% endif %}
+                <div class="num" id="num-87">87</div>
+                <div class="num" id="num-88">88</div>
+                <div class="num" id="num-89">89</div>
+                <div class="num" id="num-90">90</div>
+            </div>
+        </div>
+
+
+        <div class="winners">
+            <h3>Winners are :</h3>
+            
+            <h5>Beauty spot</h5>
+            <h5>Temperature :</h5>
+            <h5>Quick 5</h5>
+            <h5>Early 7 :</h5>
+            <h5>Early 9</h5>
+            <h5>4 Corners :</h5>
+            <h5>6 Corners</h5>
+            <h5>Sandwich</h5>
+            <h5>First Line :</h5>
+            <h5>Middle Line :</h5>
+            <h5>Last Line :</h5>
+            <h5>Love Line</h5>
+            <h5>Breakfast :</h5>
+            <h5>Lunch: </h5>
+            <h5>Dinner: </h5>
+            <h5>Full House :</h5>
+        </div>
+
+
+
+
+    
+    
+    
+    </div>
+
+
+
+    {%for nums in board%}        
+
+            <script type="text/javascript">
+                document.getElementById("{{ 'num-' ~ nums }}").style.backgroundColor = "brown";
+                document.getElementById("{{ 'num-' ~ nums }}").style.color = "white";
+            </script>
+    {% endfor %}
+    
+    {% endblock %} 
